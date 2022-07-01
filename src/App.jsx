@@ -17,9 +17,9 @@ function App() {
         <Header />
         <Menu />
         <Routes>
-          <Route path='/cities/:city' exact element={<Cities />}/>
-          <Route path='/' exact element={<Home />}/>
-          <Route path='*' element={<NotFound />} />
+          <Route path='/weatherApp/cities/:city' exact element={<Cities />}/>
+          <Route path='/weatherApp' exact element={<Home />}/>
+          <Route path='/weatherApp/*' element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
