@@ -1,0 +1,203 @@
+:root {
+  --main-dark-color: #722727;
+  --main-mid-color: #af5858;
+  --main-light-color: #c3e0e5;
+  --alt-color: rgb(255, 51, 51);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--main-mid-color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+}
+
+.main-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  height: 12vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  margin: 2rem;
+  border-radius: 1em;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.26);
+  background: rgb(45, 60, 66);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation-duration: 500ms;
+  animation-name: slide;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  font-size: 2em;
+}
+
+.city {
+  background-color: var(--main-mid-color);
+  color: var(--main-light-color);
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  cursor: pointer;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-light-color);
+  position: absolute;
+  width: 20vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 12vh;
+  border-radius: 0 0 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.26);
+  z-index: 1;
+  animation-duration: 300ms;
+  animation-name: slide-menu;
+}
+
+.menu li {
+  padding: 2em;
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--main-dark-color);
+  transition-duration: 300ms;
+}
+
+.menu li:hover{
+  background-color: var(--main-mid-color);
+  color: var(--main-light-color);
+  cursor: pointer;
+}
+
+.menu-icon{
+  position: absolute;
+  left: 1vw;
+  cursor: pointer;
+}
+
+select {
+  text-align: center;
+  padding: 0.5em;
+  background-color: var(--main-dark-color);
+  color: #fff;
+  font-size: 2em;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  margin: 2em auto 0;
+  background-color: var(--main-dark-color);
+  padding: 1em;
+  font-size: 0.85em;
+  color: var(--main-mid-color);
+  text-align: center;
+}
+
+.footer {
+  column-count: 3;
+  font-size: 0.9em;
+  gap: 4em;
+  text-align: justify;
+}
+
+.rise {
+  animation-duration: 1s;
+  animation-name: rising;
+}
+
+/* 404 */
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12rem;
+  font-weight: 700;
+  color: var(--alt-color);
+}
+
+@keyframes slide {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 2rem;
+  }
+
+}
+
+@keyframes rising {
+  form {
+    margin-top: 20rem;
+  }
+
+  50% {
+    margin-top: 20rem;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    left: -20vw;
+  }
+
+  to {
+    left: 0;
+  }
+}
