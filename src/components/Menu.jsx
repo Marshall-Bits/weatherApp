@@ -19,7 +19,7 @@ const Menu = ()=>{
     if(!hidden){
         return(
             <ul className="menu">
-                <Link to="/"><li>Home</li></Link>
+                <Link to="/weatherApp"><li>Home</li></Link>
                 <li onClick={changeUnits}>Change units to {otherUnit}</li>
                 <li onClick={()=> window.open("https://openweathermap.org/api", "_blank")}>Check the API docs</li>
             </ul>
