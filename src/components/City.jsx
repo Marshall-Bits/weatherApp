@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const City = ({ name }) => {
   const apiKey = process.env.REACT_APP_API_KEY;
-  console.log(apiKey);
   const [data, setData] = useState();
   const [errorSearching, setErrorSearching] = useState(false);
   const { settings } = useContext(SettingsContext);
