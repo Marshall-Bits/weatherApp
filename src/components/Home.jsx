@@ -12,7 +12,7 @@ const Home = (()=>{
             <h2>Or search it here:</h2>
             <div>
                 <input type="text" onChange={handleSearchString}/>
-                <Link to={'/cities/'+searchString}><button>I'm feeling lucky</button></Link>
+                <Link to={'weatherApp/cities/'+searchString}><button>I'm feeling lucky</button></Link>
             </div>
         </div>
     )

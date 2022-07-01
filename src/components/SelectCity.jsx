@@ -10,7 +10,7 @@ const SelectCity = () => {
     return (
         <select defaultValue={"Select your city"} onChange={(e) => {
             updateSetting('selectedCity', e.target.value);
-            navigate(`/cities/${(e.target.value).toLowerCase()}`)
+            navigate(`weatherApp/cities/${(e.target.value).toLowerCase()}`)
         }} name="select-city" >
             <option disabled="disabled">Select your city</option>   
             {settings.cities.map((city) => {
